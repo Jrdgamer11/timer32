@@ -2,18 +2,18 @@
 <html>
     <head>
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <title>Spring break countdown!</title>
+        <title>Winter break countdown!</title>
     </head>
     <body>
         <nav class="w3-container w3-blue">
-         <h1 style="display: inline-block;">Spring break countdown!</h1> <a href="www.bob.com"><p style="display: inline-block; position: relative; left: 900px;">Track your own date!!</p></a>
+         <h1 style="display: inline-block;">Winter break countdown!</h1> <a href="jrdgamer11.github.io/timer32"><p style="display: inline-block; position: relative; left: 900px;">Track your own date!!</p></a>
         </nav>
         <div style="height: 660px;">
             <center><h1 style="position: relative" >Days  Hours  Minutes  Seconds</h1></center>
            <center><h1 style="position: relative; font-size: 100px; top: 130px; display: inline-block;" id="Days" ></h1><h1 style="position: relative; font-size: 100px; top: 130px;display: inline-block;"> : </h1>  </h1><h1 style="position: relative; font-size: 100px; top: 130px; display: inline-block;" id="Hours" >00  :  00  :  00  :  00</h1><h1 style="position: relative; font-size: 100px; top: 130px;display: inline-block;"> : </h1><h1 style="position: relative; font-size: 100px; top: 130px; display: inline-block;" id="Minutes" >00  :  00  :  00  :  00</h1><h1 style="position: relative; font-size: 100px; top: 130px;display: inline-block;"> : </h1><h1 style="position: relative; font-size: 100px; top: 130px;display: inline-block;" id="seconds"> 0d0d0d0 </h1></center>
         </div>
         <footer class="w3-container w3-blue-grey" style="position: relative; ">
-            <p  style="position: relative; right: 0;">Made by: Jrdgamer11</p>
+            <p  style="position: relative; right: 0;">Made by: Jacob Dermody</p>
         </footer>
     </body>
     <script>
@@ -30,10 +30,10 @@
             hours = date.getHours()
             minutes = date.getMinutes()
             seconds = date.getSeconds()
-            targetdate = new Date("2025-03-15")
-            targetdate.setMinutes(15)
-            targetdate.setSeconds(60)
-            targetdate.setHours(15)
+            targetdate = new Date("2025-12-20")
+            targetdate.setMinutes(30)
+            targetdate.setSeconds(0)
+            targetdate.setHours(13)
             targetday = targetdate.getDate()
             targetminutes = targetdate.getMinutes()
             targethours = targetdate.getHours()
@@ -49,7 +49,7 @@
             if (hours > 16) {
                 daysuntill -= 1
             }
-            minutesuntill = 59 - minutes
+            minutesuntill = 59 - minutes - 30
             secondsuntill = 60 - seconds
             daydisplay.innerHTML = daysuntill
             hourdisplay.innerHTML = hoursuntill
@@ -84,7 +84,7 @@
                 }
                 setInterval(update, 300)
                 if (bob == 1) {
-                    alert("YAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAY! To Punta Cana We GO!!")
+                    alert("YAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAY!")
                 }
             }
             date = new Date()
@@ -96,7 +96,7 @@
                         hourdisplay.innerHTML = 0
                         minutesdisplay.innerHTML = 0
                         secodnsdisplay.innerHTML = 0
-                        alert("YAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAY! To Punta Cana We GO!!")
+                        alert("YAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAY!")
             }
             else {
                 update()
