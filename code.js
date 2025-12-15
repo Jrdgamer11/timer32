@@ -10,6 +10,7 @@
  hourDisplay = document.getElementById('Hours')
  minutesDisplay = document.getElementById('Minutes')
  secodnsDisplay = document.getElementById('seconds')
+ lagWarn = alert('WARNING: This website may cause lag to your device!')
  function updatetimer() {
     tDate = new Date()
     cYear = tDate.getFullYear()
