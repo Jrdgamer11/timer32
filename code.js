@@ -32,10 +32,13 @@
    minutesLeft = aMinutes - cMinute - 2
    secondsLeft = 60 - cSeconds 
    console.log(secondsLeft)
+   if (aMinutes - cMinute - 2 < 1) {
+      minutesLeft = 60 + (aMinutes-cMinute - 2)
+   }
    if (daysLeft <= 0) {
       daysLeft = '00'
    }
-   if (hoursLeft <= 0) {
+   if (hoursLeft <= 1) {
       hoursLeft = '00'
    }
    if (minutesLeft <= 0) {
