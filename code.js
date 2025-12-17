@@ -12,6 +12,9 @@
  secodnsDisplay = document.getElementById('seconds')
  lagWarn = alert('WARNING: This website may cause lag to your device!')
  function updatetimer() {
+   document.getElementById(':1').innerHTML = ' : '
+   document.getElementById(':2').innerHTML = ' : '
+   document.getElementById(':3').innerHTML = ' : '
     tDate = new Date()
     cYear = tDate.getFullYear()
     cDay = tDate.getDate()
@@ -38,7 +41,7 @@
    if (daysLeft <= 0) {
       daysLeft = '00'
    }
-   if (hoursLeft <= 1) {
+   if (hoursLeft < 1) {
       hoursLeft = '00'
    }
    if (minutesLeft <= 0) {
@@ -87,6 +90,12 @@
          hoursLeft = 24 + hi
       }
 
+   }
+   if (minutesLeft >= bMinute) {
+      hoursLeft -= 1
+   }
+   if (minutesLeft == 60) {
+      minutesLeft == '00'
    }
    console.log(secondsLeft)
    dayDisplay.innerHTML = daysLeft
