@@ -62,9 +62,10 @@
    }
    if (hoursLeft < 10) {
       if (hoursLeft == '00') {
-
+         console.log('Changed to 00')
       }else {
       hoursLeft = "0" + hoursLeft
+      console.log('Changed to 0+')
       }
    }
    if (minutesLeft < 10) {
@@ -93,9 +94,15 @@
    }
    if (minutesLeft >= bMinute) {
       hoursLeft -= 1
+      if (hoursLeft < 1) {
+         hoursLeft = '00'
+      }
    }
-   if (minutesLeft == 60) {
+   if (minutesLeft == '60') {
       minutesLeft == '00'
+   }
+   if (aHour-cHour == '0') {
+      hoursLeft = '23'
    }
    console.log(secondsLeft)
    dayDisplay.innerHTML = daysLeft
