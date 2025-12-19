@@ -36,7 +36,11 @@
    secondsLeft = 60 - cSeconds 
    console.log(secondsLeft)
    if (aMinutes - cMinute - 2 < 1) {
+      if (aMinutes - cMinute - 2 == 0) {
+
+      }else {
       minutesLeft = 60 + (aMinutes-cMinute - 2)
+      }
    }
    if (daysLeft <= 0) {
       daysLeft = '00'
@@ -48,7 +52,7 @@
       minutesLeft = '00'
    }
    if (minutesLeft == 0) {
-      if (aSeconds - cSeconds <= 0) {
+      if (aSeconds - cSeconds >= 0) {
          secondsLeft = '00'
       }
    }
@@ -58,14 +62,6 @@
 
       }else {
       daysLeft = "0" + daysLeft
-      }
-   }
-   if (hoursLeft < 10) {
-      if (hoursLeft == '00') {
-         console.log('Changed to 00')
-      }else {
-      hoursLeft = "0" + hoursLeft
-      console.log('Changed to 0+')
       }
    }
    if (minutesLeft < 10) {
@@ -102,7 +98,17 @@
       minutesLeft == '00'
    }
    if (aHour-cHour == '0') {
+      if (daysLeft < 0){
       hoursLeft = '23'
+      }
+   }
+   if (hoursLeft < '10') {
+      if (hoursLeft == '00') {
+         console.log('Changed to 00')
+      }else {
+      hoursLeft = "0" + hoursLeft
+      console.log('Changed to 0+')
+      }
    }
    console.log(secondsLeft)
    dayDisplay.innerHTML = daysLeft
@@ -113,17 +119,19 @@
       if (aHour - cHour <= 0) {
          if (aMinutes - cMinute - 2 < 0) {
                clearInterval(timer)
-               setZeros()
+               timerComplete()
    }
    }
    }
  }
 const timer = setInterval(updatetimer, 1000)
-function setZeros() {
+function timerComplete() {
+   clearInterval(timer)
    dayDisplay.innerHTML = '00'
    hourDisplay.innerHTML = '00'
    minutesDisplay.innerHTML = '00'
    secodnsDisplay.innerHTML = '00'
+   document.getElementById('confetti').style.display = ''
 }
  function storage() {
   console.log(cYear)
