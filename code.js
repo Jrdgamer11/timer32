@@ -1,6 +1,6 @@
  // Imput varibles and date here
  // Date in form of YYYY/MM/DD
- bDate = '2025/12/19'
+ bDate = '2026/3/13'
  // The zero hour in military time
  bHour = '13'
  // The zero minute
@@ -109,6 +109,21 @@
       hoursLeft = "0" + hoursLeft
       console.log('Changed to 0+')
       }
+   }
+   if (adate.getMonth() - tDate.getMonth() > 0) {
+      var multi = adate.getMonth() - tDate.getMonth()
+      daysLeft = 'COUNTDOWN WILL RELEASE ANOTHER MONTH'
+      hoursLeft = ''
+      minutesLeft = ''
+      secondsLeft = ''
+      dayDisplay.style.fontSize = '4'
+      hourDisplay.style.display = 'none'
+      minutesDisplay.style.display = 'none'
+      secodnsDisplay.style.display = 'none'
+      document.getElementById(':1').display = 'none'
+      document.getElementById(':2').display = 'none'
+      document.getElementById(':3').display = 'none'
+      clearInterval(timer)
    }
    console.log(secondsLeft)
    dayDisplay.innerHTML = daysLeft
