@@ -112,7 +112,7 @@
    }
    if (adate.getMonth() - tDate.getMonth() > 0) {
       var multi = adate.getMonth() - tDate.getMonth()
-      daysLeft = 'COUNTDOWN WILL RELEASE ANOTHER MONTH'
+      daysLeft = 'COUNTDOWN WILL RELEASE IN MARCH'
       hoursLeft = ''
       minutesLeft = ''
       secondsLeft = ''
