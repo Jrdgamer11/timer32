@@ -1,4 +1,6 @@
-# timer32
-A cool project website made for timers!
+# Welcome to Timer 32!
+A little project I made to countdown to various dates.
+Feel free to duplicate this project to use on your own.
 
-Currently set to Dec. 19 at 1:40 PM.
+# Currently set to:
+Mar. 13 at 1:40 PM.
