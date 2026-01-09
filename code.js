@@ -112,17 +112,17 @@
    }
    if (adate.getMonth() - tDate.getMonth() > 0) {
       var multi = adate.getMonth() - tDate.getMonth()
-      daysLeft = 'COUNTDOWN WILL RELEASE IN MARCH'
+      daysLeft = 'Countdown will release in March.'
       hoursLeft = ''
       minutesLeft = ''
       secondsLeft = ''
-      dayDisplay.style.fontSize = '4'
+      dayDisplay.style.fontSize = '50px'
       hourDisplay.style.display = 'none'
       minutesDisplay.style.display = 'none'
       secodnsDisplay.style.display = 'none'
-      document.getElementById(':1').display = 'none'
-      document.getElementById(':2').display = 'none'
-      document.getElementById(':3').display = 'none'
+      document.getElementById(':1').style.display = 'none'
+      document.getElementById(':2').style.display = 'none'
+      document.getElementById(':3').style.display = 'none'
       clearInterval(timer)
    }
    console.log(secondsLeft)
