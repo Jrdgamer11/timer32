@@ -1,15 +1,18 @@
  // Imput varibles and date here
  // Date in form of YYYY/MM/DD
- bDate = '2026/3/13'
+ bDate = '2026/4/2'
  // The zero hour in military time
  bHour = '13'
  // The zero minute
  bMinute = '40'
+ // Title of the event
+ title = "Spring Break 2"
  //Thx for using Timer32!
  dayDisplay = document.getElementById('Days')
  hourDisplay = document.getElementById('Hours')
  minutesDisplay = document.getElementById('Minutes')
  secodnsDisplay = document.getElementById('seconds')
+ document.getElementById('title').innerHTML = title + ' Countdown!'
  lagWarn = alert('WARNING: This website may cause lag to your device!')
  function updatetimer() {
    document.getElementById(':1').innerHTML = ' : '
@@ -112,7 +115,8 @@
    }
    if (adate.getMonth() - tDate.getMonth() > 0) {
       var multi = adate.getMonth() - tDate.getMonth()
-      daysLeft = 'Countdown will release in March.'
+      getAwaitedMonth()
+      daysLeft = 'Countdown will release in ' + awaitedMonth
       hoursLeft = ''
       minutesLeft = ''
       secondsLeft = ''
@@ -147,6 +151,50 @@ function timerComplete() {
    minutesDisplay.innerHTML = '00'
    secodnsDisplay.innerHTML = '00'
    document.getElementById('confetti').style.display = ''
+}
+function getAwaitedMonth() {
+  monthNum =  adate.getMonth() + 1
+  awaitedMonth = 'January'
+  addeddays = '0'
+  if (monthNum == 2) {
+   awaitedMonth = 'Febuary'
+   addeddays += 31
+   daysLeft += addeddays
+  }
+   if (monthNum == 3) {
+   awaitedMonth = 'March'
+   addeddays += 59
+   daysLeft += addeddays
+  }
+   if (monthNum == 4) {
+   awaitedMonth = 'April'
+   addeddays += 90
+   daysLeft += addeddays
+  }
+   if (monthNum == 5) {
+   awaitedMonth = 'May'
+  }
+   if (monthNum == 6) {
+   awaitedMonth = 'June'
+  }
+   if (monthNum == 7) {
+   awaitedMonth = 'July'
+  }
+   if (monthNum == 8) {
+   awaitedMonth = 'August'
+  }
+   if (monthNum == 9) {
+   awaitedMonth = 'September'
+  }
+   if (monthNum == 10) {
+   awaitedMonth = 'October'
+  }
+   if (monthNum == 11) {
+   awaitedMonth = 'November'
+  }
+   if (monthNum == 12) {
+   awaitedMonth = 'December'
+  }
 }
  function storage() {
   console.log(cYear)
