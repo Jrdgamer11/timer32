@@ -1,12 +1,12 @@
  // Imput varibles and date here
  // Date in form of YYYY/MM/DD
- bDate = '2026/4/2'
+ bDate = '2026/5/28'
  // The zero hour in military time
  bHour = '13'
  // The zero minute
  bMinute = '40'
  // Title of the event
- title = "Spring Break 2"
+ title = "Summer Break"
  //Thx for using Timer32!
  dayDisplay = document.getElementById('Days')
  hourDisplay = document.getElementById('Hours')
